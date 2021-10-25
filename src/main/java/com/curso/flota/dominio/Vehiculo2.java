@@ -26,8 +26,11 @@ public class Vehiculo2 {
 		if(cargaMaxima <= 100) {
 			this.cargaMaxima = 100;
 		}else {
+		
 			this.cargaMaxima = cargaMaxima;
 		}
+	
+			
 		
 	} //fin constructor
 	
@@ -76,5 +79,20 @@ public class Vehiculo2 {
 		this.numeroCajas ++;
 		return true; 
 	}
+	
+	
+	public boolean cargar(Caja caja) {
+		 if(caja.getPeso() <= 0) {
+			  return false;
+		  }
+		  if( cargaMaxima <  (caja.getPeso() + cargaActual)) {
+			  return false;
+		  }
+		this.cargaActual += caja.getPeso();
+		this.numeroCajas ++;
+		return true; 
+	}
+	
+	
 
 } //fin clase 
