@@ -58,7 +58,7 @@ public class Vehiculo2 {
      * Si el peso de la caja supera la carga permitida 
      * teniendo en cuenta la carga actual, no carga la caja
      * y devuelve false
-     * EJempl:
+     * EJemplo:
      *     ....
      * 
      * @param peso  double con peso de la caja a cargar en kg
