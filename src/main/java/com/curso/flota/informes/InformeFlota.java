@@ -1,10 +1,15 @@
 package com.curso.flota.informes;
 
+import com.curso.flota.dominio.Vehiculo2;
+import java.util.*;
+
 public class InformeFlota {
 
-	private class Interna{
+
+	public void generaInformeFlota(Vehiculo2 v) {
 	 
 	}
+	
 
 }
 

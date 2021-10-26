@@ -24,6 +24,9 @@ public class Application
 		System.out.println("carga actual " + v.getCargaActual());
 		System.out.println("numero cajas " + v.getNumeroCajas());
 		
+		int a = 3;
+	    
+		
 		
 	}
 	
