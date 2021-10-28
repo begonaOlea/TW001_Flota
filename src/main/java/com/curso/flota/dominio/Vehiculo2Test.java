@@ -10,7 +10,7 @@ class Vehiculo2Test {
 	void crearVehiculoConCargaMaxCeroEntoncePondraCargaMaxA100() {
 		
 		//PREPARAS DATOS DE ENTRADA DE LA PRUEBA
-		Vehiculo2 v = new Vehiculo2("B111", 0);
+		Vehiculo v = new Vehiculo("B111", 0);
 		
 		double espero = 100;
 		double recibo = v.getCargaMaxima();
@@ -23,7 +23,7 @@ class Vehiculo2Test {
 	@Test
 	void cargarUnaCajaQueCabeEnunVEhiculoVAcio() {
 		
-		Vehiculo2 v = new Vehiculo2("B111", 200);
+		Vehiculo v = new Vehiculo("B111", 200);
 		Caja caja =new Caja();
 		boolean entro = v.cargar(caja); 
 		

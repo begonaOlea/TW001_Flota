@@ -6,7 +6,7 @@ package com.curso.flota.dominio;
  * @author begonaolea
  * @version 1
  */
-public class Vehiculo2 {
+public class Vehiculo {
 	
 	//atributos
 	private double cargaMaxima;
@@ -15,7 +15,7 @@ public class Vehiculo2 {
 	private int numeroCajas = 0;
 
 	//constructores
-	public  Vehiculo2(String matricula, double cargaMaxima) {
+	public  Vehiculo(String matricula, double cargaMaxima) {
 		super();
 		//validar
 		if(matricula == null) {

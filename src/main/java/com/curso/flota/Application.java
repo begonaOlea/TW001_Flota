@@ -1,6 +1,6 @@
 package com.curso.flota;
 
-import com.curso.flota.dominio.Vehiculo2;
+import com.curso.flota.dominio.Vehiculo;
 
 public class Application
 {
@@ -8,7 +8,7 @@ public class Application
 		
 		System.out.println("-- prueba clase Vehiculo --");
 		
-		Vehiculo2 v = new Vehiculo2("B111",200.0);
+		Vehiculo v = new Vehiculo("B111",200.0);
 		
 		System.out.println("cargo  100kg");
 		if ( ! v.cargar(100) ) {
