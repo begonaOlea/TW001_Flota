@@ -14,6 +14,11 @@ public class Vehiculo {
 	private double cargaActual = 0.0;
 	private int numeroCajas = 0;
 
+//	public Vehiculo() {
+//		super();
+//		
+//	}
+	
 	//constructores
 	public  Vehiculo(String matricula, double cargaMaxima) {
 		super();
@@ -28,10 +33,7 @@ public class Vehiculo {
 		}else {
 		
 			this.cargaMaxima = cargaMaxima;
-		}
-	
-			
-		
+		}	
 	} //fin constructor
 	
 
@@ -46,11 +48,9 @@ public class Vehiculo {
 		return matricula;
 	}
 
-	
 	public double getCargaActual() {
 		return cargaActual;
 	}
-
 
 	public int getNumeroCajas() {
 		return numeroCajas;
@@ -92,6 +92,17 @@ public class Vehiculo {
 		this.numeroCajas ++;
 		return true; 
 	}
+	
+	
+	public double calcularFuel() {
+		return cargaActual * 0.8;
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 
