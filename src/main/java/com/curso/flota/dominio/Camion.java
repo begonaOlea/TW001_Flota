@@ -1,6 +1,8 @@
 package com.curso.flota.dominio;
 
-public class Camion extends Vehiculo{
+import java.util.Date;
+
+public class Camion extends Vehiculo implements Reservable{
 	
 	//atributos
 	private int numeroEjes;
@@ -15,5 +17,17 @@ public class Camion extends Vehiculo{
 	public int getNumeroEjes() {
 		return numeroEjes;
 	}
+
+	@Override
+	public double calcularFuel() {
+		return getCargaActual() * 0.80;
+	}
+
+	@Override
+	public boolean reservar(Date fecha) {
+		return false;
+	}
+
+
 
 }

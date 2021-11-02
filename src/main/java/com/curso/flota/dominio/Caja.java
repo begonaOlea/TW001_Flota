@@ -7,7 +7,11 @@ public class Caja {
 	public Caja() {
 		this.peso = 100;
 	}
-	
+
+	public Caja(int peso) {
+		this.peso = peso;
+	}
+
 	public double getPeso() {
 		return peso;
 	}

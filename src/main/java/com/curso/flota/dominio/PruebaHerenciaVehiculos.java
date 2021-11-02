@@ -4,7 +4,7 @@ import com.curso.flota.informes.InformeFlota;
 
 public class PruebaHerenciaVehiculos {
 	
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		
 		Camion c = new Camion("2345G",4000,3);	
 		c.cargar(new Caja());
@@ -15,10 +15,11 @@ public class PruebaHerenciaVehiculos {
 		
 		Vehiculo v = new Camion("4444G",500,3);	
 		
-		Vehiculo[] lista = new Vehiculo[3];
+		Vehiculo[] lista = new Vehiculo[4];
 		lista[0] = c;
 		lista[1] = b;
 		lista[2] = new Camion("5552D",4000,2);
+		lista[3] = new Avioneta("AAAAA3",500);
 		
 		for(Vehiculo vh : lista) {
 			System.out.println(vh.getMatricula());

@@ -1,17 +1,19 @@
 package com.curso.flota.dominio;
 
+import com.curso.flota.excepciones.CargaException;
+
 /**
  * Clase que representa un camion.......
  * 
  * @author begonaolea
  * @version 1
  */
-public class Vehiculo {
+public abstract class Vehiculo {
 	
 	//atributos
 	private double cargaMaxima;
 	private String matricula;
-	private double cargaActual = 0.0;
+	protected double cargaActual = 0.0;
 	private int numeroCajas = 0;
 
 //	public Vehiculo() {
@@ -60,24 +62,24 @@ public class Vehiculo {
      * Método que carga una caja (<b>peso en kg</b>) en el camión
      * Si el peso de la caja supera la carga permitida 
      * teniendo en cuenta la carga actual, no carga la caja
-     * y devuelve false
+     * y devuelve una excepcion
      * EJemplo:
      *     ....
      * 
      * @param peso  double con peso de la caja a cargar en kg
      *              el peso debe ser positivo
-     * @return  boolean que es true pudo carga y false sino
+     * @throws CargaException si el peso de la caja no es positivo o supera la carga max permi 
      */
-	public boolean cargar(double peso) {
+	public void cargar(double peso) throws CargaException {
 		  if(peso <= 0) {
-			  return false;
+			throw new CargaException("Peso de la caja no puede ser <= 0");
 		  }
 		  if( cargaMaxima <  (peso + cargaActual)) {
-			  return false;
+			 throw new CargaException("No se pudo cargar caja. "
+			 		+ "Supera la carga máxima permitida");
 		  }
 		this.cargaActual += peso;
 		this.numeroCajas ++;
-		return true; 
 	}
 	
 	
@@ -94,16 +96,9 @@ public class Vehiculo {
 	}
 	
 	
-	public double calcularFuel() {
-		return cargaActual * 0.8;
-	}
+	public abstract double calcularFuel();
 	
-	
-	
-	
-	
-	
-	
-	
+
+
 
 } //fin clase 

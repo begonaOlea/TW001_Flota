@@ -15,5 +15,13 @@ public class Barcaza extends Vehiculo{
 		return potenciaMotor;
 	}
 	
+	@Override
+	public double calcularFuel() {
+		
+		return 100 
+				+ cargaActual * 0.7 
+				+ potenciaMotor/30 ;
+	}
+	
 
 }
